@@ -60,6 +60,7 @@ def Simpson(f, n, a, b):
     return integral, True
 
 
+
 def SimpsonError(func,b,a,h):
     xsi = 1
     print("ƒ(x): ", func)
