@@ -24,8 +24,6 @@ def Trapezoidal(f, n, a, b, tf):
 
 
 
-
-
 def func():
     # we need to change it according to the question
     return sp.sin(x)
@@ -69,7 +67,7 @@ def SimpsonError(func,b,a,h):
     diff_4 = lambdify(x, f2)
     print("ƒ⁴(", xsi, ") =", diff_4(xsi))
 
-    return ((h*4) / 180)(b-a)*diff_4(xsi)
+    return ((h**4) / 180)*(b-a)*diff_4(xsi)
 
 
 def MainFunction():
@@ -78,7 +76,7 @@ def MainFunction():
     print("Division into sections n =", n)
     print("Numerical Integration of definite integral in range [0,𝛑] ∫= SIN(X)")
     choice = int(input(
-        "Which method do you want? \n\t1.The Trapezoidal Rule \n\t2.Simpson’s Rule\n"))
+        "Which method do you want? \n\t1.The Trapezoidal method \n\t2.Simpson’s method\n"))
     if choice == 1:
         print("I = ", round(Trapezoidal(f, n, 0, math.pi, True), 6))
     elif choice == 2:
